@@ -1,11 +1,11 @@
 import React from "react";
 
-const Child = ({ person }) => {
-  //   console.log(props);
+const Child = ({ handler }) => {
+  // console.log(props);
   return (
     <div>
       <h1>
-        welcome {person.name} -{person.course}-{person.count}
+        <button onClick={handler}>Click</button>
       </h1>
     </div>
   );
