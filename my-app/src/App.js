@@ -3,12 +3,11 @@ import "./App.css";
 import { Footer } from "./components/Header";
 import Header from "./components/Header";
 import Welcome from "./components/Welcome";
+import Parent from "./components/Parent";
 function App() {
   return (
     <div className="App">
-      <Footer />
-      <Header />
-      <Welcome />
+      <Parent />
     </div>
   );
 }
