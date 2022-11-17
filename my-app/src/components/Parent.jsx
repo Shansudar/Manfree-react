@@ -2,13 +2,15 @@ import React from "react";
 import Child from "./Child";
 
 const Parent = () => {
-  const handler = () => {
-    console.log("handler is working");
+  const person = {
+    name: "madurai",
+    count: 10,
+    course: "java",
   };
   return (
-    <div>
+    <div className="parent-compo">
       <h3>welcome to manfree</h3>
-      <Child handler={handler} />
+      <Child person={person} /> 
     </div>
   );
 };
