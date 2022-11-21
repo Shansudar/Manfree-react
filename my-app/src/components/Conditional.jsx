@@ -1,5 +1,5 @@
 import React from "react";
-const isLogin = true;
+const isLogin = false;
 
 // method 1
 
@@ -28,7 +28,7 @@ export const TypeTwo = () => {
 export const TypeThree = () => {
   return (
     <div>
-      <h2>{isLogin && <h2>welcome manfree</h2>}</h2>
+      <h2>{isLogin || <h2>welcome manfree</h2>}</h2>
       <h2>nothing</h2>
     </div>
   );
