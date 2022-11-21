@@ -1,12 +1,12 @@
 import logo from "./logo.svg";
 import "./App.css";
-
-import { Array, User } from "./components/Array";
+import { TypeOne, TypeThree, TypeTwo } from "./components/Conditional";
 function App() {
   return (
     <div className="App">
-      <Array />
-      <User />
+      <TypeOne />
+      <TypeTwo />
+      <TypeThree />
     </div>
   );
 }
