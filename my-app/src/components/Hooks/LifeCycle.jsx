@@ -6,7 +6,6 @@ const fetcher = () => {
   };
 };
 const LifeCycle = () => {
-    
   const [count, setCount] = useState(10);
   useEffect(fetcher, [count]);
   return (
