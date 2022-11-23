@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const StateHook = () => {
-  const start = 1 0;
+  const start = 10;
   console.log("component is rendering");
   const [count, setCount] = useState(start);
   // const handleInr = () => {
