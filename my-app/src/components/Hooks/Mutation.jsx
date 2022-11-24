@@ -3,7 +3,8 @@ import React, { useState } from "react";
 const Mutation = () => {
   const [names, setNames] = useState(["abi", "boobalan", "sudharsan"]);
   const handleClick = () => {
-    names.push("manfree");
+    // names.push("manfree");
+    setNames([...names, "manfree"]);
     console.log(names);
   };
   return (
