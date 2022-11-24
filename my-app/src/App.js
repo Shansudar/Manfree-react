@@ -6,11 +6,12 @@ import StateHook from "./components/Hooks/StateHook";
 import LifeCycle from "./components/Hooks/LifeCycle";
 import { useState } from "react";
 import Users from "./components/Hooks/Users";
+import Mutation from "./components/Hooks/Mutation";
 function App() {
   const [on, setOn] = useState(true);
   return (
     <div className="App">
-     <Users/>
+     <Mutation/>
     </div>
   );
 }
