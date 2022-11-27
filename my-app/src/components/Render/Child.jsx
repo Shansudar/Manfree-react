@@ -1,8 +1,12 @@
 import React from "react";
 
-const Child = ({ person }) => {
+const Child = ({ dummy }) => {
   console.log("child is rendering");
-  return <div>Child-{person.name}</div>;
+  return (
+    <div>
+      <button onClick={dummy}>child</button>
+    </div>
+  );
 };
 
 export default React.memo(Child);
