@@ -1,16 +1,18 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import Child from "./Child";
-const person = { name: "manfree" };
+import Second from "./Second";
+const intitail = { name: "manfree", age: 21 };
 const Parent = () => {
-  const [name, setName] = useState(person);
-  const [age, setAge] = useState("23");
+  const [person, setPerson] = useState(intitail);
   console.log("parent is rendering");
+  const another = useMemo(() => ({ name: "men" }), []);
   return (
     <div>
-      <div>Parent-{name.name}</div>
-      <button onClick={() => setAge(100)}>age</button>
-      <button onClick={() => setName({ name: "cbe" })}>name</button>
-      <Child person={name} />
+      <div>Parent-{person.name}</div>
+      <button onClick={() => setPerson({ name: "cbe", age: 100 })}>name</button>
+
+      <Child person={person.name} />
+      <Second men={another} />
     </div>
   );
 };
