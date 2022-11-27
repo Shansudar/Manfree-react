@@ -1,9 +1,9 @@
 import "./App.css";
-import Example from "./components/Example";
+import Reference from "./components/Hooks/Reference";
 function App() {
   return (
     <div className="App">
-     <Example/>
+      <Reference />
     </div>
   );
 }

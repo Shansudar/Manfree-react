@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const initialState = {
   name: "ragnar",
@@ -7,11 +7,19 @@ const initialState = {
 
 const Example = () => {
   const [person, setPerson] = useState(initialState);
+  useEffect(() => {
+    console.log("working");
+
+    return () => {
+      console.log("inner Function");
+    };
+  }, [person,]);
   const keys = Object.keys(person);
   const handleClick = () => {
     const another = { ...person, age: 21 };
+
     setPerson(another);
-    console.log(person);
+    // console.log(person);
   };
   return (
     <div>
