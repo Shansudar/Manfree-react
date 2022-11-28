@@ -1,5 +1,6 @@
 import "./App.css";
-import Parent from "./components/Render/Parent";
+import Parent from "./components/Parent";
+
 function App() {
   return (
     <div className="App">

@@ -1,17 +1,24 @@
-import React from "react";
-import Child from "./Child";
-
+import React, { useState } from "react";
+import john from "./one.jpg";
 const Parent = () => {
-  const person = {
-    name: "madurai",
-    count: 10,
-    course: "java",
+  const [name, setName] = useState("");
+  const handleChange = (e) => {
+    let value = e.target.value;
+    setName(value);
   };
   return (
-    <div className="parent-compo">
-      <h3>welcome to manfree</h3>
-      <Child person={person} /> 
+    <div>
+      <form action="">
+        <label htmlFor="">name</label>
+        <input type="text" /> <br />
+        <label htmlFor="">age</label>
+        <input type="text" />
+        <br />
+        <label htmlFor="">course</label>
+        <input type="text" />
+      </form>
     </div>
   );
 };
+
 export default Parent;
