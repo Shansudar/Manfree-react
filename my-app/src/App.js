@@ -1,10 +1,10 @@
 import "./App.css";
-import Parent from "./components/Parent";
+import Form from "./Task/TodoList/Form";
 
 function App() {
   return (
     <div className="App">
-      <Parent />
+      <Form />
     </div>
   );
 }
