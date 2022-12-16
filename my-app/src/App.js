@@ -1,5 +1,5 @@
 import "./App.css";
-import Shop from "./components/Hooks/Shop";
+import Shop from "./Task/Hooks/Shop";
 function App() {
   return (
     <div className="App">
