@@ -1,9 +1,9 @@
 import "./App.css";
-import Counter from "./components/Hooks/Counter";
+import Shop from "./components/Hooks/Shop";
 function App() {
   return (
     <div className="App">
-      <Counter />
+      <Shop />
     </div>
   );
 }
