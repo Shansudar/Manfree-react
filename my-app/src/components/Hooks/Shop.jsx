@@ -7,10 +7,10 @@ const initialState = {
 const reducer = (state, action) => {
   switch (action.type) {
     case "orderCar": {
-      return { ...state, carCount: state.carCount - 1 };
+      return { ...state, carCount: state.carCount - action.payload };
     }
     case "orderBike": {
-      return { ...state, bikeCount: state.bikeCount - 1 };
+      return { ...state, bikeCount: state.bikeCount - action.payload };
     }
     default: {
       return state;
@@ -22,9 +22,17 @@ const Shop = () => {
   return (
     <div>
       <h3>{`car count - ${state.carCount}   bike count -${state.bikeCount}`}</h3>
-      <button onClick={() => dispatch({ type: "orderCar" })}>Order Car</button>
-      <button onClick={() => dispatch({ type: "orderBike" })}>
+      <button onClick={() => dispatch({ type: "orderCar", payload: 1 })}>
+        Order Car
+      </button>
+      <button onClick={() => dispatch({ type: "orderBike", payload: 1 })}>
         Order Bike
+      </button>
+      <button onClick={() => dispatch({ type: "orderCar", payload: 5 })}>
+        Order Car-5
+      </button>
+      <button onClick={() => dispatch({ type: "orderBike", payload: 5 })}>
+        Order Bike-5
       </button>
     </div>
   );
