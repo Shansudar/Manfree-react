@@ -4,7 +4,7 @@ const List = ({ list, handleDelete, handleChange }) => {
   return (
     <div>
       <ul>
-        {list.map((item, index) => (
+        {list.map((item) => (
           <li key={item.id}>
             <h4 className={item.done ? "success" : "item"}>{item.title}</h4>
             <input

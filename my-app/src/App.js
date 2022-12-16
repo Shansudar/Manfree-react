@@ -1,10 +1,9 @@
 import "./App.css";
-import Form from "./Task/TodoList/Form";
-
+import Counter from "./components/Hooks/Counter";
 function App() {
   return (
     <div className="App">
-      <Form />
+      <Counter />
     </div>
   );
 }
