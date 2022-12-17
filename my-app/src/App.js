@@ -1,9 +1,12 @@
+import { useState } from "react";
 import "./App.css";
-import IceCream from "./Task/Hooks/IceCream";
+import Company from "./components/Hooks/Company";
 function App() {
+  const [name, setName] = useState("manfree");
   return (
     <div className="App">
-      <IceCream />
+      <Company name={name} />
+      <button onClick={() => setName("madurai")}>Click</button>
     </div>
   );
 }
