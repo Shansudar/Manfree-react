@@ -23,6 +23,22 @@ const reducer = (state, action) => {
         };
       }
     }
+    case "orderOnce": {
+      console.log(state);
+      if (state.count === 5) {
+        return {
+          iceCount: state.iceCount - 1,
+          count: 1,
+          cakeCount: state.cakeCount - 1,
+        };
+      } else {
+        return {
+          ...state,
+          iceCount: state.iceCount - 1,
+          count: state.count + 1,
+        };
+      }
+    }
 
     case "orderCake": {
       return { ...state, cakeCount: state.cakeCount - action.payload };
@@ -40,15 +56,15 @@ const IceCream = () => {
   return (
     <div>
       <h2>{`cakecount - ${state.cakeCount} iceCount - ${state.iceCount}`}</h2>
-      <input
+      {/* <input
         type="number"
         value={state.count}
         onChange={(e) =>
           dispatch({ type: "count", payload: parseInt(e.target.value) })
         }
-      />
+      /> */}
       <button
-        onClick={() => dispatch({ type: "orderIce", payload: state.count })}>
+        onClick={() => dispatch({ type: "orderOnce", payload: state.count })}>
         order
       </button>
     </div>
