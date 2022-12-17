@@ -1,9 +1,9 @@
 import "./App.css";
-import Shop from "./Task/Hooks/Shop";
+import IceCream from "./Task/Hooks/IceCream";
 function App() {
   return (
     <div className="App">
-      <Shop />
+      <IceCream />
     </div>
   );
 }
