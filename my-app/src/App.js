@@ -5,12 +5,10 @@ import UserContext, { ContextValue } from "./Context/UserContext";
 function App() {
   const { handleChange } = useContext(ContextValue);
   return (
-    <UserContext>
-      <div className="App">
-        <Company />
-        <button onClick={() => handleChange("madurai")}>Click</button>
-      </div>
-    </UserContext>
+    <div className="App">
+      <Company />
+      <button onClick={() => handleChange("madurai")}>Click</button>
+    </div>
   );
 }
 
