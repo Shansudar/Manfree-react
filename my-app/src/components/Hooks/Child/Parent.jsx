@@ -1,12 +1,12 @@
 import React from "react";
 import Child from "./Child";
 
-const Parent = ({ name }) => {
+const Parent = () => {
   console.log("parent");
   return (
     <div>
-      <h4>Parent- {name}</h4>
-      <Child name={name} />
+      <h4>Parent</h4>
+      <Child />
     </div>
   );
 };

@@ -1,13 +1,16 @@
-import { useState } from "react";
+import { useContext } from "react";
 import "./App.css";
 import Company from "./components/Hooks/Company";
+import UserContext, { ContextValue } from "./Context/UserContext";
 function App() {
-  const [name, setName] = useState("manfree");
+  const { handleChange } = useContext(ContextValue);
   return (
-    <div className="App">
-      <Company name={name} />
-      <button onClick={() => setName("madurai")}>Click</button>
-    </div>
+    <UserContext>
+      <div className="App">
+        <Company />
+        <button onClick={() => handleChange("madurai")}>Click</button>
+      </div>
+    </UserContext>
   );
 }
 

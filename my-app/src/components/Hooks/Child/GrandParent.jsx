@@ -1,12 +1,12 @@
 import React from "react";
 import Parent from "./Parent";
 
-const GrandParent = ({ name }) => {
+const GrandParent = () => {
   console.log("grand parent");
   return (
     <div>
-      <h4>GrandParent -{name}</h4>
-      <Parent name={name} />
+      <h4>GrandParent </h4>
+      <Parent />
     </div>
   );
 };

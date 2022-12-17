@@ -1,7 +1,9 @@
 import React from "react";
+import { useContext } from "react";
+import { ContextValue } from "../../../Context/UserContext";
 
-const GrandChild = ({ name }) => {
-  console.log("grand child");
+const GrandChild = () => {
+  const { name } = useContext(ContextValue);
   return <h4>GrandChild-{name}</h4>;
 };
 

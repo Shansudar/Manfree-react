@@ -1,11 +1,10 @@
 import React from "react";
 import GrandParent from "./Child/GrandParent";
 
-const Company = ({ name }) => {
+const Company = () => {
   return (
     <div>
-      <GrandParent name={name} />
-     
+      <GrandParent />
     </div>
   );
 };
