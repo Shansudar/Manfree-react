@@ -1,9 +1,9 @@
 import React from "react";
-import { useContext } from "react";
-import { ContextValue } from "../../../Context/UserContext";
+
+import { useAuth } from "../../../Context/UserContext";
 
 const GrandChild = () => {
-  const { name } = useContext(ContextValue);
+  const { name } = useAuth();
   return <h4>GrandChild-{name}</h4>;
 };
 
