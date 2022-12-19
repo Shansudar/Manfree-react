@@ -5,7 +5,7 @@ const UserContext = ({ children }) => {
   const handleChange = (text) => {
     setName("chennai");
   };
-  console.log("name is logging", name);
+  // console.log("name is logging", name);
   return (
     <ContextValue.Provider value={{ name, handleChange }}>
       {children}
