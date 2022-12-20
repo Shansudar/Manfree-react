@@ -5,6 +5,7 @@ const Index = () => {
   const [count, setCount] = useState(0);
   console.log("component is rendering");
   return (
+    
     <div>
       <h2>{count}</h2>
       <button onClick={() => setCount(count + 1)}>inc</button>

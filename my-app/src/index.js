@@ -4,13 +4,23 @@ import "./index.css";
 import App from "./App";
 import Header from "./components/Header";
 import reportWebVitals from "./reportWebVitals";
-import UserContext from "./Context/UserContext";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import PageNotFound from "./pages/404";
 const node = document.getElementById("root");
 const root = ReactDOM.createRoot(node);
 root.render(
-  <UserContext>
-    <App />
-  </UserContext>
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/*" element={<PageNotFound />} />
+    </Routes>
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
