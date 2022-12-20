@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+nav{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(10, 69, 169);
+  padding: 10px 0;
+
+}
+a{
+    color: aliceblue;
+}
+.contact-page a{
+  color: black;
+}

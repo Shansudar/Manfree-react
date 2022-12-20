@@ -9,10 +9,12 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import PageNotFound from "./pages/404";
+import NavBar from "./components/NavBar";
 const node = document.getElementById("root");
 const root = ReactDOM.createRoot(node);
 root.render(
   <BrowserRouter>
+    <NavBar />
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/home" element={<Home />} />
