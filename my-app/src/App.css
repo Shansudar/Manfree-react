@@ -27,6 +27,16 @@
 .App-link {
   color: #61dafb;
 }
+h4{
+  display: inline-block;
+  padding:0  10px;
+}
+.income{
+  border-right: 5px solid green;
+}
+.expence{
+  border-right: 5px solid red;
+}
 
 @keyframes App-logo-spin {
   from {
@@ -35,4 +45,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+a.active{
+  font-size: 14px;
+  text-decoration: none;
+  transition: 300ms;
+  transform: scale(1.3) translateY(-2px);
 }

@@ -20,23 +20,23 @@ const Home = () => {
       .filter((item) => item.amount > 0)
       .map((item) => item.amount)
       .reduce((a, b) => a + b);
-    console.log(income);
+
     const expence = list
       .filter((item) => item.amount < 0)
       .map((item) => item.amount)
       .reduce((a, b) => a + b);
 
     const balance = income + expence;
-    console.log(income, expence, total);
     setTotal({ income, expence, balance });
   }, [list]);
   const handleAdd = () => {
     setList([...list, entry]);
     setEntry(inititalState);
   };
+  const symbol = "$";
   return (
     <div>
-      <h3>balance- {total.balance}</h3>
+      <h3>{`balance-${symbol}${total.balance}.00`}</h3>
       <h4>{`income - ${total.income} expence - ${String(total.expence).slice(
         1
       )}`}</h4>
@@ -58,7 +58,7 @@ const Home = () => {
       <ul>
         {list.map((item, index) => (
           <li key={index}>
-            <h4>
+            <h4 className={item.amount > 0 ? "income" : "expence"}>
               {item.title} -{item.amount}
             </h4>
           </li>
