@@ -1,9 +1,9 @@
 import "./App.css";
-import RenderComponent from "../src/components/Render";
+import Home from "./Task/expence tracker/Home";
 function App() {
   return (
     <div className="App">
-      <RenderComponent />
+      <Home/> 
     </div>
   );
 }
