@@ -1,0 +1,10 @@
+.user-container li {
+    margin-top: 10px;
+    font-size: larger;
+}
+a{
+    color: black;
+    display: block;
+    margin-top: 14px;
+    margin-left: 20px;
+}

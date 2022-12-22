@@ -20,7 +20,7 @@ const Home = () => {
       .filter((item) => item.amount > 0)
       .map((item) => item.amount)
       .reduce((a, b) => a + b);
-
+    console.log(income);
     const expence = list
       .filter((item) => item.amount < 0)
       .map((item) => item.amount)

@@ -10,6 +10,8 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import PageNotFound from "./pages/404";
 import NavBar from "./components/NavBar";
+import Users from "./pages/Users";
+import User from "./pages/User";
 const node = document.getElementById("root");
 const root = ReactDOM.createRoot(node);
 root.render(
@@ -20,6 +22,8 @@ root.render(
       <Route path="/home" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/users" element={<Users />} />
+      <Route path="/user/:id" element={<User />} />
       <Route path="/*" element={<PageNotFound />} />
     </Routes>
   </BrowserRouter>
