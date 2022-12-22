@@ -12,11 +12,14 @@ const Users = () => {
   }, []);
   return (
     <div className="user-container">
-      {list.map((item) => (
-        <Link key={item.id} to={`/user/${item.id}`}>
-          {item.name}
-        </Link>
-      ))}
+      <div>
+        {" "}
+        {list.map((item) => (
+          <Link key={item.id} to={`/user/${item.id}`}>
+            {item.name}
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

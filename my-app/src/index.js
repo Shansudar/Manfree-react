@@ -12,6 +12,8 @@ import PageNotFound from "./pages/404";
 import NavBar from "./components/NavBar";
 import Users from "./pages/Users";
 import User from "./pages/User";
+import Products from "./pages/Products";
+import SingleProduct from "./pages/SingleProduct";
 const node = document.getElementById("root");
 const root = ReactDOM.createRoot(node);
 root.render(
@@ -24,6 +26,9 @@ root.render(
       <Route path="/contact" element={<Contact />} />
       <Route path="/users" element={<Users />} />
       <Route path="/user/:id" element={<User />} />
+      <Route path="/products" element={<Products />}>
+        <Route path=":name" element={<SingleProduct />} />
+      </Route>
       <Route path="/*" element={<PageNotFound />} />
     </Routes>
   </BrowserRouter>
