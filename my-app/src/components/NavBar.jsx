@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
-const routes = ["home", "contact", "about", "products","users"];
+const routes = ["home", "contact", "about", "products", "users", "login"];
 const NavBar = () => {
   return (
     <nav className="navbar-container">

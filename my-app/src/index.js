@@ -14,24 +14,31 @@ import Users from "./pages/Users";
 import User from "./pages/User";
 import Products from "./pages/Products";
 import SingleProduct from "./pages/SingleProduct";
+import LoginContext from "./Context/LoginContext";
+import Profile from "./pages/Profile";
+import Login from "./pages/Login";
 const node = document.getElementById("root");
 const root = ReactDOM.createRoot(node);
 root.render(
-  <BrowserRouter>
-    <NavBar />
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/users" element={<Users />} />
-      <Route path="/user/:id" element={<User />} />
-      <Route path="/products" element={<Products />}>
-        <Route path=":name" element={<SingleProduct />} />
-      </Route>
-      <Route path="/*" element={<PageNotFound />} />
-    </Routes>
-  </BrowserRouter>
+  <LoginContext>
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/users" element={<Users />} />
+        <Route path="/user/:id" element={<User />} />
+        <Route path="/products" element={<Products />}>
+          <Route path=":name" element={<SingleProduct />} />
+        </Route>
+        <Route path="/*" element={<PageNotFound />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </BrowserRouter>
+  </LoginContext>
 );
 
 // If you want to start measuring performance in your app, pass a function
