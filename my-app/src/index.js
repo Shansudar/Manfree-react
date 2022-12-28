@@ -17,6 +17,7 @@ import SingleProduct from "./pages/SingleProduct";
 import LoginContext from "./Context/LoginContext";
 import Profile from "./pages/Profile";
 import Login from "./pages/Login";
+import Wrapper from "./pages/Wrapper";
 const node = document.getElementById("root");
 const root = ReactDOM.createRoot(node);
 root.render(
@@ -34,7 +35,14 @@ root.render(
           <Route path=":name" element={<SingleProduct />} />
         </Route>
         <Route path="/*" element={<PageNotFound />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route
+          path="/profile"
+          element={
+            <Wrapper>
+              <Profile />
+            </Wrapper>
+          }
+        />
         <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
