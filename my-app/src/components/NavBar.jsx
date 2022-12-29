@@ -9,6 +9,7 @@ const routes = [
   "users",
   "login",
   "profile",
+  "child",
 ];
 const NavBar = () => {
   return (

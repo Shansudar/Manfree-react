@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
@@ -18,6 +18,10 @@ import LoginContext from "./Context/LoginContext";
 import Profile from "./pages/Profile";
 import Login from "./pages/Login";
 import Wrapper from "./pages/Wrapper";
+import Container from "./pages/Container";
+import { Suspense } from "react";
+import Parent from "./pages/Parent";
+const Child = lazy(() => import("./pages/Child"));
 const node = document.getElementById("root");
 const root = ReactDOM.createRoot(node);
 root.render(
@@ -38,12 +42,20 @@ root.render(
         <Route
           path="/profile"
           element={
-            <Wrapper>
+            <Container>
               <Profile />
-            </Wrapper>
+            </Container>
           }
         />
         <Route path="/login" element={<Login />} />
+        <Route
+          path="/child"
+          element={
+            <Suspense fallback={<Parent />}>
+              <Child />
+            </Suspense>
+          }
+        />
       </Routes>
     </BrowserRouter>
   </LoginContext>
