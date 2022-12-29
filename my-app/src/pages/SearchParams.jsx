@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
@@ -30,6 +29,7 @@ const SearchParams = () => {
       </ul>
       <button onClick={handleActive}>show active users</button>
       <button onClick={handleAll}>show all users</button>
+      
     </div>
   );
 };
