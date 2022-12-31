@@ -1,9 +1,9 @@
 import "./App.css";
-import SearchParams from "./pages/SearchParams";
+import Form from "./Task/TodoList/Form";
 function App() {
   return (
     <div className="App">
-      <SearchParams />
+      <Form />
     </div>
   );
 }

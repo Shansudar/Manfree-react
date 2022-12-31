@@ -15,15 +15,17 @@ const initialState = initial.map((item) => generate(item));
 const Form = () => {
   const [list, setList] = useState(initialState);
   const [task, setTask] = useState({ title: "", done: false });
+  const [edit, setEdit] = useState(null);
   const handleAdd = () => {
-    const value = generate(task);
-    setList([...list, value]);
-    setTask({ title: "", done: false });
+    if (edit) {
+      const result = list.map((item) => (item.id === edit.id ? task : item));
+      setList(result);
+    } else {
+      const value = generate(task);
+      setList([...list, value]);
+      setTask({ title: "", done: false });
+    }
   };
-
-  useEffect(() => {
-    console.log(list);
-  }, [list]);
 
   const handleDelete = (id) => {
     const result = list.filter((item) => item.id !== id);
@@ -36,6 +38,18 @@ const Form = () => {
     setList(result);
   };
 
+  useEffect(() => {
+    if (edit) {
+      setTask(edit);
+    }
+
+    console.log(edit);
+  }, [edit]);
+
+  const handleEdit = (id) => {
+    const data = list.find((item) => item.id === id);
+    setEdit(data);
+  };
   return (
     <div>
       <div>
@@ -50,6 +64,7 @@ const Form = () => {
         list={list}
         handleDelete={handleDelete}
         handleChange={handleChange}
+        handleEdit={handleEdit}
       />
     </div>
   );

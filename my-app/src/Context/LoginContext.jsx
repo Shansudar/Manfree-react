@@ -5,7 +5,7 @@ const initialState = { name: "", isLogged: false };
 const LoginContext = ({ children }) => {
   const [user, setUser] = useState(initialState);
   useEffect(() => {
-    console.log(user);
+    // console.log(user);
   }, [user]);
   const login = (name) => {
     setUser({ name, isLogged: true });

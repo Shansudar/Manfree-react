@@ -1,6 +1,6 @@
 import React from "react";
 
-const List = ({ list, handleDelete, handleChange }) => {
+const List = ({ list, handleDelete, handleChange, handleEdit }) => {
   return (
     <div>
       <ul>
@@ -12,6 +12,7 @@ const List = ({ list, handleDelete, handleChange }) => {
               checked={item.done}
               onChange={() => handleChange(item.id)}
             />
+            <button onClick={() => handleEdit(item.id)}>Edit</button>
             <button onClick={() => handleDelete(item.id)}>Delete</button>
           </li>
         ))}
