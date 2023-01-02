@@ -1,12 +1,9 @@
-import logo from "./logo.svg";
-import "./App.css";
-import ProductView from "./redux/Features/cake/ProductView";
-
-
+import UserView from "./redux/Features/user/UserView";
+import './App.css'
 function App() {
   return (
     <div className="App">
-      <ProductView />
+      <UserView />
     </div>
   );
 }
