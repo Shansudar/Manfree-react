@@ -1,11 +1,18 @@
-import UserView from "./redux/Features/user/UserView";
+import { BrowserRouter } from "react-router-dom";
 import "./App.css";
-import HomePage from "./components/HomePage";
+import ContactView, {
+  AddContact,
+  SingleContact,
+} from "./redux/Features/contact/ContactView";
 function App() {
   return (
-    <div className="App">
-      <HomePage />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <ContactView />
+        <SingleContact />
+        <AddContact/>
+      </div>
+    </BrowserRouter>
   );
 }
 
